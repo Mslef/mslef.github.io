@@ -1,5 +1,5 @@
 body {
-	font-family: 'Indie Flower', cursive;
+	font-family: 'Indie Flower', cursive !important;
 	text-align: center;
 	background-color: gray;
 }
