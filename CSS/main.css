@@ -14,6 +14,13 @@ header {
 	padding: 3em;
 }
 
+nav {
+	width: 100%;
+	margin-top: 0;
+	border-bottom: 1px solid gray;
+	
+}
+
 a {
 	text-decoration: none;
 	color: black;
@@ -34,7 +41,7 @@ ul li {
 	width: 100%;
 }
 
-.title-contents, .link-menu {
+nav, .title-contents {
 	background-color: #3bb374;
 }
 
@@ -49,12 +56,6 @@ ul li {
 	
 }
 
-.link-menu  {
-	width: 100%;
-	margin-top: 0;
-	border-bottom: 1px solid gray;
-	
-}
 .projects, .summary {
 	text-align: center;
 	margin: 0 auto;
@@ -62,6 +63,17 @@ ul li {
 	background-color: #E8E8E7;
 	max-width: 800px;
 }
+
+.project-list {
+	display: flex;
+	display: -webkit-flex;
+}
+
+.project {
+	width: 33%;
+	margin:1em;
+}
+
 
 @media (min-width: 800px){
 	ul, .projects, .summary {
@@ -71,16 +83,31 @@ ul li {
 }
 
 @media (max-width: 630px) {
+	body {
+		font-size: 20px;
+	}
+
 	header {
 		background-color: #3bb374;
 		padding: 0;
 		margin:0;
+		height: 100%;
 	}
+
 	.title-contents {
 		border: none;
 		width: 100%;
-		height: 100%;
 		margin: auto;
 	}
+
+	.project-list {
+		display: block;
+	}
+
+	.project {
+		width: 90%;
+		margin: auto;
+	}
+
 }
 
