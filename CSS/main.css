@@ -10,10 +10,9 @@ body {
 header {
 	background-image: url('../montrealPanorama.jpg');
 	background-color: #8BCC98;
-	/* Replace with cool image */
 	height: 12em;
-	width: 100%-3em;
-	padding: 3em;
+	width: 100%;
+	padding: 3em 0;
 }
 
 nav {
@@ -49,7 +48,6 @@ ul li {
 	text-align: center;
 	border: 1px solid gray;
 	max-width: 300px;
-	max-height: 180px;
 	padding: 1em;
 	
 }
@@ -116,16 +114,13 @@ nav, .title-contents {
 
 
 	.title-contents, nav, header {
+		padding: 0;
 		border: none;
 		width: 100%;
 		margin: auto;
 		background: none;
 		background-color: #3bb374;
 		
-	}
-
-	.title-contents {
-		margin: 0;
 	}
 
 	.project-list {
