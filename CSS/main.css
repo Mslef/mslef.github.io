@@ -8,11 +8,15 @@ body {
 }
 
 header {
-	background-image: url('../montrealPanorama.jpg');
+	background-image: url('../images/montrealPanorama.jpg');
 	background-color: #8BCC98;
 	height: 12em;
 	width: 100%;
 	padding: 3em 0;
+}
+
+h1 {
+	font-size: 38px;
 }
 
 nav {
@@ -36,6 +40,11 @@ ul {
 ul li {
 	display: inline;
 	margin: 0 20px;
+}
+
+.project img {
+	width: 100%;
+	border: 1px solid black;
 }
 
 .container {
@@ -123,7 +132,7 @@ nav, .title-contents {
 	}
 
 	.title-contents {
-		padding:0;
+		padding:1em 0;
 	}
 
 

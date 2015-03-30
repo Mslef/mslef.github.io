@@ -14,7 +14,7 @@
 <body>
 	<div class="container contents">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<header>
 					<h1>Meme Editor</h1>
 					<h2>Customize your meme to perfection!</h2>
@@ -37,10 +37,14 @@
 			<div class="row">
 				<div class="col-md-12">
 					<label>Or chose local file</label>
-					<input id="file" type="file">
-					
 				</div>
 			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<input id="file" type="file">
+				</div>
+			</div>		
 		</form>
 		<hr style="width:350px;">
 		<form>
@@ -77,10 +81,15 @@
 		</div>
 		
 		<canvas id="canvas" width="400px" height="400px"></canvas>
-		<form>
-			<input id="saveName" type="text" value="NewMeme.jpg">
-			<a id="saveButton"><input type="button" value="Save image" onclick="saveImg()"></a>
-		</form>
+		
+		<div class="row">
+			<div class="col-md-12">
+				<form>
+					<input id="saveName" type="text" value="NewMeme.jpg">
+					<a id="saveButton"><input type="button" value="Save image" onclick="saveImg()"></a>
+				</form>
+			</div>
+		</div>
 		<footer>
 			<p>Designed by Marcel Lefebvre</p>
 			<p>04-03-2015</p>
