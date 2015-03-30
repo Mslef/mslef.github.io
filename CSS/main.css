@@ -122,6 +122,11 @@ nav, .title-contents {
 		
 	}
 
+	.title-contents {
+		padding:0;
+	}
+
+
 	.project-list {
 		display: block;
 	}
