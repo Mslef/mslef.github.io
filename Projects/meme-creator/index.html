@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="Scripts/script.js"></script>
+	<title>Cool Meme Editor</title>
+</head>
+
+<body>
+	<div class="container contents">
+		<div class="row">
+			<div class="col-md-6">
+				<header>
+					<h1>Meme Editor</h1>
+					<h2>Customize your meme to perfection!</h2>
+				</header>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<label>Enter Image URL (e.g. http://www.thisisnotasite.com/kitten.jpg)</label>
+			</div>
+		</div>
+		<form>
+			<div class="row">
+				<div class="col-md-12">
+					<input id="url" type="url" placeholder="http://example.com/puppy.jpg">
+					<input name="URL" type="button" onclick="updateImg()" value="Import image">
+
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<label>Or chose local file</label>
+					<input id="file" type="file">
+					
+				</div>
+			</div>
+		</form>
+		<hr style="width:350px;">
+		<form>
+			<div class="row">
+				<div class="col-md-12">
+					<label>Upper Text</label>
+					<input id="upperText" type="text" placeholder="So tired" onchange="updateUpper()">
+				</div>
+			</div>
+		</form>
+		<form>
+			<div class="row">
+				<div class="col-md-12">
+					<label>Lower Text</label>
+					<input id="lowerText" type="text" placeholder="Of cute memes">
+				</div>
+			</div>
+		</form>
+
+		<div class="row">
+			<div class="col-md-12">
+				<label>Font</label>
+				<select id="font">
+					<option value="Impact">Impact</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Palatino">Palatino</option>
+					<option value="Times">Times</option>
+					<option value="Indie Flower">Indie Flower</option>
+				</select>
+				<label>Size</label>
+				<select id="fontSize">
+				</select>	
+			</div>
+		</div>
+		
+		<canvas id="canvas" width="400px" height="400px"></canvas>
+		<form>
+			<input id="saveName" type="text" value="NewMeme.jpg">
+			<a id="saveButton"><input type="button" value="Save image" onclick="saveImg()"></a>
+		</form>
+		<footer>
+			<p>Designed by Marcel Lefebvre</p>
+			<p>04-03-2015</p>
+		</footer>
+	</div>	
+	<script type="text/javascript">
+		//creating options for the size dropdown menu
+		var fontOption = "<option value=\"%value%\">%value%px</option>";
+		for (var i = 30; i < 62; i+=2){
+			var newValue = fontOption.replace("%value%", i.toString());
+			$("#fontSize").append(newValue.replace("%value%", i.toString()));
+			console.log(newValue.replace("%value%", i.toString()));
+		}
+
+		//loading the canvas and canvas operations
+		var ctx = document.getElementById('canvas').getContext('2d');
+		var meme = new Image();	
+
+		meme.onload = function(){ 
+			
+			drawCanvas();
+
+		};
+
+		meme.src = "http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg";
+
+		var upperText = "So tired";
+		var lowerText = "Of cute memes";
+		var fontSize = "36px";
+		var font = "Impact";
+		var fontType = "";
+
+		var input1 = document.getElementById('upperText');
+		var input2 = document.getElementById('lowerText');
+		var input3 = document.getElementById('font');
+		var input4 = document.getElementById('fontSize');
+		input1.oninput = textChangeListener;
+		input2.oninput = textChangeListener;
+		input3.oninput = textChangeListener;
+		input4.oninput = textChangeListener;
+
+	</script>
+	
+</body>
+</html>
