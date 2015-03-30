@@ -1,15 +1,27 @@
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	background-color: gray;
 
+}
+
+header {
+	background-color: #8BCC98; /* Replace with cool image */
+	height: 12em;
+	width: 100%;
 }
 
 a {
-	color: black;
 	text-decoration: none;
+	color: black;
 }
+
 
 ul {
 	list-style-type: none;
+	margin:0;
 }
 
 ul li {
@@ -17,34 +29,34 @@ ul li {
 	margin-right: 20px;
 }
 
-.title {
-	background-color: #8BCC98;
-	height: 200px;
+.container {
+	display: flex;
+}
+
+.title-contents, .link-menu {
+	background-color: #3bb374;
 }
 
 .title-contents {
-	display: block;
-	vertical-align: center;
+	width: 50%;
+	margin: auto;
 	text-align: center;
-	border: 1px solid black;
+	border: 1px solid gray;
 	max-width: 300px;
 	padding: 10px;
-	
-	margin-right: auto;
-	margin-left: auto;
 	
 }
 
 .link-menu  {
-	background-color: #8BCC98;
-	text-decoration: none;
+	margin-top: 0;
+	border-bottom: 1px solid gray;
+	
+}
+.projects, .summary {
+	text-align: center;
+	margin: 0 auto;
+	background-color: #E8E8E7;
+	max-width: 800px;
 }
 
-.contents {
-	text-align: center;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-	background-color: #E8E8E7;
-}
 
