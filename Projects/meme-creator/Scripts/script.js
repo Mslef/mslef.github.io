@@ -20,11 +20,11 @@ function textChangeListener (evt) {
       		window.fontSize = value+"px";
       		break;
       	default :
-      		console.log("wrong event input")
+      		console.log("wrong event input");
       }
       
       
-      drawCanvas()
+      drawCanvas();
     }
 
 
@@ -35,15 +35,15 @@ function saveImg() {
 	$("#saveButton").attr("href", canvas.toDataURL("image/png"));
 	$("#saveButton").attr("download", $("#saveName").val());
 	
-	//var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
-	//window.location.href=image; // it will save locally
+	var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
+	window.location.href=image; // it will save locally
 }
 
 function drawCanvas() {
 	ctx.drawImage(meme,0,0, 400, 400);
 	ctx.textAlign = "center";
 	ctx.font = fontSize+" " +fontType+" " +font;
-	console.log(upperText)
+	console.log(upperText);
 	ctx.fillStyle = "white";
 
 	ctx.fillText(upperText,200, 50);
