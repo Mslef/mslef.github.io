@@ -1,8 +1,7 @@
 body {
+	font-family: 'Indie Flower', cursive;
 	text-align: center;
 	background-color: gray;
-	font-family: 'Indie Flower', cursive;
-
 }
 
 header {
@@ -36,6 +35,7 @@ hr {
 
 input {
 	margin: 1em 0;
+	padding: 0.5em;
 }
 
 .contents {
