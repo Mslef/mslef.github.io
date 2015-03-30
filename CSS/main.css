@@ -3,12 +3,14 @@ body {
 	font-size: 18px;
 	margin: 0;
 	padding: 0;
-	background-color: gray;
+	background-color: #dbddd4;
 
 }
 
 header {
-	background-color: #8BCC98; /* Replace with cool image */
+	background-image: url('../montrealPanorama.jpg');
+	background-color: #8BCC98;
+	/* Replace with cool image */
 	height: 12em;
 	width: 100%-3em;
 	padding: 3em;
@@ -34,15 +36,11 @@ ul {
 
 ul li {
 	display: inline;
-	margin-right: 20px;
+	margin: 0 20px;
 }
 
 .container {
 	width: 100%;
-}
-
-nav, .title-contents {
-	background-color: #3bb374;
 }
 
 .title-contents {
@@ -56,17 +54,28 @@ nav, .title-contents {
 	
 }
 
+nav, .title-contents {
+	background-color: #3bb374;
+  	background: linear-gradient(160deg, #3bb374, #579d4e);
+  	border-bottom: 2px solid gray;
+}
+
 .projects, .summary {
-	text-align: center;
 	margin: 0 auto;
-	padding: 10px;
-	background-color: #E8E8E7;
+	background-color: #eeeeee;
 	max-width: 800px;
+	padding: 20px;
+}
+
+.summary {
+	text-align: justify;
+
 }
 
 .project-list {
 	display: flex;
 	display: -webkit-flex;
+	text-align: center;
 }
 
 .project {
@@ -88,16 +97,30 @@ nav, .title-contents {
 	}
 
 	header {
-		background-color: #3bb374;
+		background-image: none;
 		padding: 0;
 		margin:0;
 		height: 100%;
 	}
 
-	.title-contents {
+	nav {
+		padding-bottom: 1em;
+	}
+
+	ul li {
+		margin-bottom: 1em;
+		border-bottom: 1px solid gray;
+		display: block;
+	}
+
+
+	.title-contents, nav, header {
 		border: none;
 		width: 100%;
 		margin: auto;
+		background: none;
+		background-color: #3bb374;
+		
 	}
 
 	.project-list {
