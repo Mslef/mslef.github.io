@@ -111,6 +111,7 @@ nav, .title-contents {
 		margin-bottom: 1em;
 		border-bottom: 1px solid gray;
 		display: block;
+		margin-left: 5px;
 	}
 
 
@@ -121,6 +122,10 @@ nav, .title-contents {
 		background: none;
 		background-color: #3bb374;
 		
+	}
+
+	.title-contents {
+		margin: 0;
 	}
 
 	.project-list {
