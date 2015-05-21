@@ -3,14 +3,14 @@ body {
 	font-size: 18px;
 	margin: 0;
 	padding: 0;
-	background-color: #dbddd4;
+	position:relative;
+	width:100%;
+
 
 }
 
-header {
-	background-image: url('../images/montrealPanorama.jpg');
-	background-color: #8BCC98;
-	height: 12em;
+.header {
+	height: 5em;
 	width: 100%;
 	padding: 3em 0;
 }
@@ -19,16 +19,23 @@ h1 {
 	font-size: 38px;
 }
 
-nav {
+.nav-bar {
 	width: 100%;
 	margin-top: 0;
 	border-bottom: 1px solid gray;
-	
+	min-height:50px;
+	font-size:25px;
+	padding-top: 5px;
+}
+
+.nav-bar a {
+	font-weight:bolder;
+	color: #dbe21f;
 }
 
 a {
 	text-decoration: none;
-	color: black;
+
 }
 
 
@@ -53,12 +60,17 @@ ul li {
 
 .title-contents {
 	width: 50%;
+	min-height:200px;
 	margin: 0 auto;
 	text-align: center;
 	border: 1px solid gray;
 	max-width: 300px;
-	padding: 1em;
-	
+	padding: 10px;
+	font-size:30px;
+	position:relative;
+	top:-300px;
+
+
 }
 
 nav, .title-contents {
@@ -90,24 +102,58 @@ nav, .title-contents {
 	margin:1em;
 }
 
-
-@media (min-width: 800px){
-	ul, .projects, .summary {
-		max-width: 800px;
-		margin: auto;
-	}
+.main-background {
+		background-color: #dbddd4;
+    min-width: 100%;
+    min-height:400px;
 }
+
+.parallax {
+  -webkit-perspective: 20px;
+          perspective: 3px;
+  perspective-origin: 0 100%;
+  -webkit-perspective-origin:100% 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.parallax_layer {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.parallax_layer_base {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+
+}
+.parallax_layer_back {
+  -webkit-transform: translateZ(-2px) scale(2);
+          transform: translateZ(-2px) scale(2);
+					top:200px;
+}
+
+
+ul, .projects, .summary {
+	max-width: 800px;
+	margin: auto;
+}
+
 
 @media (max-width: 630px) {
 	body {
 		font-size: 20px;
 	}
 
-	header {
+	.header {
 		background-image: none;
 		padding: 0;
 		margin:0;
-		height: 100%;
+		height: 5em;
 	}
 
 	nav {
@@ -122,13 +168,13 @@ nav, .title-contents {
 	}
 
 
-	.title-contents, nav, header {
+	.title-contents, .nav-bar, .header {
 		border: none;
 		width: 100%;
 		margin: auto;
 		background: none;
 		background-color: #3bb374;
-		
+
 	}
 
 	.title-contents {
@@ -146,4 +192,3 @@ nav, .title-contents {
 	}
 
 }
-
