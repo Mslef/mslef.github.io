@@ -10,15 +10,13 @@
 </head>
 
 <body>
+	<header>
+		<h1 class="header-title">Meme Editor</h1>
+		<h2>Customize your meme to perfection!</h2>
+	</header>
 	<div class="container contents">
-		<div class="row">
-			<div class="col-md-12">
-				<header>
-					<h1>Meme Editor</h1>
-					<h2>Customize your meme to perfection!</h2>
-				</header>
-			</div>
-		</div>
+
+
 		<div class="row">
 			<div class="col-md-12">
 				<label>Enter Image URL (e.g. http://www.thisisnotasite.com/kitten.jpg)</label>
@@ -42,7 +40,7 @@
 				<div class="col-md-12">
 					<input id="file" type="file" style="margin:auto">
 				</div>
-			</div>		
+			</div>
 		</form>
 		<hr>
 		<form>
@@ -74,12 +72,12 @@
 				</select>
 				<label>Size</label>
 				<select id="fontSize">
-				</select>	
+				</select>
 			</div>
 		</div>
-		
+
 		<canvas id="canvas" width="400px" height="400px"></canvas>
-		
+
 		<div class="row">
 			<div class="col-md-12">
 				<form>
@@ -92,7 +90,7 @@
 			<p>Designed by Marcel Lefebvre</p>
 			<p>04-03-2015</p>
 		</footer>
-	</div>	
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="Scripts/script.js"></script>
 	<script type="text/javascript">
@@ -106,10 +104,10 @@
 
 		//loading the canvas and canvas operations
 		var ctx = document.getElementById('canvas').getContext('2d');
-		var meme = new Image();	
+		var meme = new Image();
 
-		meme.onload = function(){ 
-			
+		meme.onload = function(){
+
 			drawCanvas();
 
 		};
@@ -132,7 +130,7 @@
 		input4.oninput = textChangeListener;
 
 	</script>
-	
-	
+
+
 </body>
 </html>

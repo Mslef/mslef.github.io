@@ -5,13 +5,20 @@ body {
 }
 
 header {
-	background-color: #898702;
+	background-color: #881602;
 	margin-right: auto;
-	margin-left: auto;	
+	margin-left: auto;
 	color: white;
 	text-align: center;
+	width: 100%;
 }
 
+.header-title {
+		margin: 0;
+		padding-top: 10px;
+		font-weight: bold;
+		font-size: 40px;
+}
 
 canvas {
 	display: block;
