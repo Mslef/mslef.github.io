@@ -4,75 +4,98 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Marcel Lefebvre | Front-End Web Design</title>
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300">
-	<link rel="stylesheet" href="CSS/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+	<link rel="stylesheet" href="static/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body>
-	<div class="container parallax">
-		<div class="parallax_layer parallax_layer_back">
-			<img src="images/montrealPanorama.jpg" alt="montreal in the background">
-		</div>
-		<div class="parallax_layer parallax_layer_base">
-			<header class="header">
-				<div class="title-contents">
-					<h1>Marcel Lefebvre</h1>
-					<h2>Full Stack Web Developper</h2>
-				</div>
-			</header>
+<body class="main">
+	<div class="main-background">
 
-			<nav class="nav-bar">
-				<ul>
-					<li><strong>Connect:</strong></li>
+	<header>
+		<div class="navbar navbar-default main-nav">
+			<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand"><strong>MARCEL LEFEBVRE</strong></a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     			 <ul class="nav navbar-nav navbar-right">
+					<li><a><strong>Get in touch</strong></a></li>
 					<li><a href="https://ca.linkedin.com/in/marcellefebvre">Linkedin</a></li>
 					<li><a href="https://github.com/Mslef">GitHub</a></li>
 					<li><a href="#projects">Udacity Profile Page</a></li>
 					<li><a href="mailto:marcel.lefebvre01@gmail.com">Email</a></li>
 				</ul>
-			</nav>
-
-			<div class="main-background">
-				<section class="summary">
-					<h2>Summary</h2>
-					<hr>
-					<p>I'm a full stack web developer that's passionate about my job. In our day and age, the web is a big part of our lives, and as such I thrive to create the best possible experiences on my websites. I aim for clean code following the most modern standards (HTML5, CSS3), the most modern and performant frameworks, responsive design for mobile and extremely fast load times. Take a look below for some of my projects!</p>
-				</section>
-
-				<section class="projects">
-					<h2>Featured Projects</h2>
-					<hr>
-					<div class="project-list">
-						<div class="project">
-							<h3>Frogger Clone Arcade Game</h3>
-							<a href="http://mslef.github.io/FEND/arcade-game/index.html">
-								<img src="images/frogger.jpg" alt="Frogger Game">
-							</a>
-							<p>Simple game where the player must cross a road while dodging incoming ennemies. Try it in your browser!</p>
-						</div>
-
-						<div class="project">
-							<h3>Meme Editor</h3>
-							<a href="http://mslef.github.io/Projects/meme-creator/index.html">
-								<img src="images/meme.jpg" alt="Meme editor">
-							</a>
-							<p>Meme creation tool allowing the creation of custom memes. Create then export memes to flood the internet with your funny ideas!</p>
-						</div>
-
-						<div class="project">
-							<h3>Neighbourhood map</h3>
-							<a href="http:/mslef.github.io/FEND/neighbourhood-map/index.html">
-								<img src="images/neighbourhood-map.jpg" alt="neighbourhood map" >
-							</a>
-							<p>Cool interactive site that updated the info displayed based on the address inputed. Uses data from the New York Times, Google Maps and Street view.</p>
-						</div>
-
-					</div>
-
-				</section>
 			</div>
+		</div>
+	</header>
+	<div class="projects-container container">
+		<section class="summary">
+			<p>I'm a full stack web developer playing around with Machine Learning and Game Development. 
+				This site is a showcase of some of the projects I made for fun, including some of my earliest work when I was starting out
+				(which was pretty terrible!). Enjoy!</p>
+		</section>
+
+		<hr class="section-separator">
+
+		<section class="projects container-fluid">
+			<div class="row">
+				<div class="col-sm-4">
+					<h3 class="project-title">Space Shooter</h3>
+					<hr class="title-separator">
+					<div class=" project-thumb">
+						<a href="Projects/space-shooter/index.html">
+							<img class="img-responsive" src="static/images/space-shooter-thumb.png" alt="Space Shooter">
+						</a>
+					</div>
+					<p class="project-description">Built up a simple Space Shooter Game by following the Unity official tutorial, then added some custom features to it.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="project-title">Frogger Clone Arcade Game</h3>
+					<hr class="title-separator">
+					<div class=" project-thumb">
+						<a href="FEND/arcade-game/index.html">
+							<img class="img-responsive" src="static/images/frogger.jpg" alt="Frogger Game">
+						</a>
+					</div>
+					<p class="project-description">Simple game where the player must cross a road while dodging incoming ennemies.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="project-title">Meme Editor</h3>
+					<hr class="title-separator">
+					<div class=" project-thumb">
+						<a href="Projects/meme-creator/index.html">
+							<img class="img-responsive project-thumb" src="static/images/meme.jpg" alt="Meme editor">
+						</a>
+					</div>
+					<p class="project-description">Simple meme creation tool allowing the creation of custom memes.</p>
+				</div>
+				<div class="col-sm-4">
+					<h3 class="project-title">Neighbourhood map</h3>
+					<hr class="title-separator">
+					<div class=" project-thumb">
+						<a href="FEND/neighbourhood-map/index.html">
+							<img class="img-responsive project-thumb" src="static/images/neighbourhood-map.jpg" alt="neighbourhood map" >
+						</a>
+					</div>
+					<p class="project-description">Interactive site that shows data from the New York Times Google Street View, by looking up an address in Google Maps.</p>
+				</div>
+			</div>
+		</section>
+
 		</div>
 	</div>
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </html>

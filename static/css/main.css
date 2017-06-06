@@ -1,0 +1,47 @@
+body.main {
+	font-family: 'Dosis', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #e0e0e0;
+}
+
+.navbar.main-nav {
+	border-radius: 0;
+	background-color: #8ae5f3;
+	background: linear-gradient(to left, #7ff1d6, #8ae3f1);
+	box-shadow: 1px 1px 20px gray;
+	border: none;
+}
+
+hr.section-separator {
+	border-top: 1px solid lightgray;
+}
+
+.projects-container {
+	margin: 0 auto;
+	background-color: #eeeeee;
+	max-width: 800px;
+	padding: 20px;
+	box-shadow: 5px 3px 20px gray;
+	text-align: justify;
+}
+
+.project-thumb {
+	height: 10em;
+	text-align: center;
+	overflow: hidden;
+}
+
+.project-title {
+	height: 2em;
+	text-align: center;
+}
+
+.project-description {
+	padding-top: 1em;
+	height: 5em;
+}
+
+.title-separator {
+	border-top: 1px solid #e2e2e2;
+}
